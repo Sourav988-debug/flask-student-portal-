@@ -22,3 +22,5 @@ Thumbs.db
 
 # Logs
 *.log
+
+flask_portal.db
