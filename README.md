@@ -16,13 +16,13 @@ A full-stack web application for student authentication and academic record mana
 
 | Layer | Technology |
 |-------|-----------|
-| Backend | Python, Flask |
+| Backend | Python 3, Flask |
 | Database | MySQL |
 | Frontend | HTML5, Bootstrap 5, CSS3 |
 | Auth | Flask Sessions |
 
 ## Project Structure
-```
+`
 flask-student-portal/
 ├── app.py              # Main Flask application
 ├── requirements.txt    # Python dependencies
@@ -35,29 +35,29 @@ flask-student-portal/
 │   └── grades.html
 └── static/
     └── style.css       # Custom styles
-```
+`
 
-## Setup (Local)
+## Local Setup
 
 1. Clone the repository
-```bash
-   git clone https://github.com/YOUR_USERNAME/flask-student-portal.git
-   cd flask-student-portal
-```
+`ash
+   git clone https://github.com/Sourav988-debug/flask-student-portal-.git
+   cd flask-student-portal-
+`
 
 2. Install dependencies
-```bash
+`ash
    pip install -r requirements.txt
-```
+`
 
 3. Create a .env file from the template
-```bash
+`ash
    cp .env.example .env
-```
+`
    Edit .env with your MySQL credentials.
 
-4. Set up the database
-```sql
+4. Set up MySQL database
+`sql
    CREATE DATABASE flask_lab4;
    USE flask_lab4;
    CREATE TABLE users (
@@ -75,21 +75,21 @@ flask-student-portal/
        marks INT,
        FOREIGN KEY (user_id) REFERENCES users(id)
    );
-```
+`
 
 5. Run the app
-```bash
+`ash
    python app.py
-```
+`
    Open http://127.0.0.1:5000
 
 ## Live Demo
 
-[View deployed app](https://YOUR_USERNAME.pythonanywhere.com)
+Coming soon — deploying on PythonAnywhere
 
 ## Author
 
-Your Name — [GitHub](https://github.com/YOUR_USERNAME)
+Sourav — [GitHub](https://github.com/Sourav988-debug)
 
 ## License
 
