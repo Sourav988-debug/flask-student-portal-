@@ -2,3 +2,4 @@
 flask-mysqldb
 pymysql
 python-dotenv
+gunicorn
