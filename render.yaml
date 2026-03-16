@@ -5,13 +5,5 @@
     buildCommand: pip install -r requirements.txt
     startCommand: gunicorn app:app
     envVars:
-      - key: MYSQL_HOST
-        sync: false
-      - key: MYSQL_USER
-        sync: false
-      - key: MYSQL_PASSWORD
-        sync: false
-      - key: MYSQL_DB
-        sync: false
       - key: SECRET_KEY
-        sync: false
+        value: sourav-flask-portal-2026

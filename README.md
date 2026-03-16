@@ -1,6 +1,15 @@
 ﻿# Flask Student Portal
 
-A full-stack web application for student authentication and academic record management, built with Python Flask and MySQL.
+A full-stack web application for student authentication and academic record management, built with Python Flask and SQLite.
+
+![Python](https://img.shields.io/badge/Python-3.x-blue)
+![Flask](https://img.shields.io/badge/Flask-Latest-green)
+![SQLite](https://img.shields.io/badge/Database-SQLite-lightgrey)
+![License](https://img.shields.io/badge/License-MIT-yellow)
+
+## Live Demo
+
+https://flask-student-portal.onrender.com
 
 ## Features
 
@@ -10,31 +19,34 @@ A full-stack web application for student authentication and academic record mana
 - Password reset functionality
 - Read-only academic grades viewer
 - Responsive UI using Bootstrap 5 and custom CSS
-- Secure session handling with Flask sessions
+- Secure session handling
 
 ## Tech Stack
 
 | Layer | Technology |
 |-------|-----------|
 | Backend | Python 3, Flask |
-| Database | MySQL |
+| Database | SQLite (zero config) |
 | Frontend | HTML5, Bootstrap 5, CSS3 |
-| Auth | Flask Sessions |
+| Hosting | Render (free tier) |
 
 ## Project Structure
 `
 flask-student-portal/
-├── app.py              # Main Flask application
-├── requirements.txt    # Python dependencies
-├── .env.example        # Environment variable template
-├── templates/          # HTML pages
+├── app.py               # Main Flask application
+├── requirements.txt     # Python dependencies
+├── render.yaml          # Render deployment config
+├── .env.example         # Environment variable template
+├── README.md
+├── LICENSE
+├── templates/
 │   ├── signup.html
 │   ├── login.html
 │   ├── dashboard.html
 │   ├── profile.html
 │   └── grades.html
 └── static/
-    └── style.css       # Custom styles
+    └── style.css
 `
 
 ## Local Setup
@@ -50,42 +62,16 @@ flask-student-portal/
    pip install -r requirements.txt
 `
 
-3. Create a .env file from the template
-`ash
-   cp .env.example .env
-`
-   Edit .env with your MySQL credentials.
-
-4. Set up MySQL database
-`sql
-   CREATE DATABASE flask_lab4;
-   USE flask_lab4;
-   CREATE TABLE users (
-       id INT AUTO_INCREMENT PRIMARY KEY,
-       name VARCHAR(100),
-       email VARCHAR(100) UNIQUE,
-       password VARCHAR(255),
-       phone VARCHAR(15),
-       department VARCHAR(50),
-       semester VARCHAR(10)
-   );
-   CREATE TABLE grades (
-       user_id INT,
-       subject VARCHAR(50),
-       marks INT,
-       FOREIGN KEY (user_id) REFERENCES users(id)
-   );
-`
-
-5. Run the app
+3. Run the app
 `ash
    python app.py
 `
-   Open http://127.0.0.1:5000
 
-## Live Demo
+4. Open http://127.0.0.1:5000
 
-Coming soon — deploying on PythonAnywhere
+## Deployment
+
+Deployed on Render — auto-deploys on every git push to main.
 
 ## Author
 
@@ -93,4 +79,4 @@ Sourav — [GitHub](https://github.com/Sourav988-debug)
 
 ## License
 
-MIT License — see [LICENSE](LICENSE)
+MIT License — see LICENSE
